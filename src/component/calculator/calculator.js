@@ -5,7 +5,17 @@ import { RateField } from "./mySlider";
 
 const useStyles = makeStyles({
   sliderContainer: {
-    
+    '& .MuiInputBase-root': {
+      color: 'white',},
+      '& .MuiInput-underline:before' : {
+        border: "none",
+      },
+      '& .MuiInput-underline:after' : {
+        border: "none",
+      },
+      '& .MuiInput-underline:hover:not(.Mui-disabled):before' : {
+        border: "none",
+      },
   },
 });
 
