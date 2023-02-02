@@ -9,10 +9,12 @@ import { FormControl, TextField } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-    minWidth: "400px",
+    minWidth: "500px",
     margin: " 0 auto",
-    marginTop:"20px",
-    marginBottom :"20px",    
+    marginBottom:"50px",
+    marginLeft:"50px",
+    marginTop: "20px",
+       
   },
   title: {
     fontSize: 14,

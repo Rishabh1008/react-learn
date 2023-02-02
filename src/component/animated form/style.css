@@ -1,12 +1,13 @@
 .wrapper {
-  width: 500px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .ball {
-  width: 450px;
+  width: 550px;
 height: 240px;
   background: #c00;
   z-index: -1;

@@ -17,5 +17,11 @@ const formData = [
         input1:'Pin Code',
         input2:'Contact Number',
     },
+    {
+        heading: 'Data 4',
+        id: "4",
+        input1:'Pin Code',
+        input2:'Contact Number',
+    },
 ]
 export default formData;
