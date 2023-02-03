@@ -13,6 +13,15 @@ const useStyles = makeStyles({
     border: "2px solid",
     position: "relative",
     zIndex: "1",
+    '& label.Mui-focused': {
+        color: 'white',
+      },
+      '& .MuiInput-underline:after': {
+        borderBottomColor: 'white',
+      },
+      '& .MuiTypography-colorTextSecondary' : {
+color: "white",
+      },
   },
   title: {
     fontSize: 14,
