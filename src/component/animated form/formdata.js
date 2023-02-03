@@ -1,7 +1,7 @@
 const formData = [
     {
         heading: 'Data 1',
-        id: "1",
+        id: "Data1",
         input1:'First Name',
         input2:'Last Name',
     },
