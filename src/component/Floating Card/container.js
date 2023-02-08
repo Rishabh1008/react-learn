@@ -4,22 +4,23 @@ import MyForm from "./form";
 import { useEffect } from "react";
 const useStyles = makeStyles({
   inner: {
-    minWidth: "500px",
+    maxWidth: "500px",
     backgroundColor: "#cafaff",
-    padding: "50px",
+    
   },
   main: {
     display: "flex",
     justifyContent: "space-evenly",
+    flexWrap: "wrap",
+    
   },
   margin: {
-    marginBottom: "50px",
+    margin: "50px",
   },
   ball: {
-    width: "550px",
-    height: "240px",
+    
     background: "#c00",
-    zIndex: "0",
+    zIndex: "1",
     top: "174px",
     left: "127px",
     position: "absolute",
@@ -32,17 +33,18 @@ function MyContainer() {
   function myClick(id) {
     const test = document.getElementById(id);
     const f = document.getElementById("foo");
-    f.style.transform = `translate(${test.offsetLeft - 162}px,${test.offsetTop - 192}px)`;
-    console.log('aaa', test)
+    f.style.transform = `translate(${test.offsetLeft}px , ${test.offsetTop}px)`;
+    console.log('b', f.offsetLeft, test.offsetLeft)
   }
-
+  
   useEffect(() => {
     const test = document.getElementById("form1");
     const f = document.getElementById("foo");
-    console.log('aaa' , test.offsetLeft )
-    f.style.left = `${test.offsetLeft - 24}px`;
-    f.style.top = `${test.offsetTop - 18}px`;
-    
+    console.log('aaa', f.offsetLeft, test.offsetLeft)
+    f.style.left = `${test.offsetLeft - 20}px`;
+    f.style.top = `${test.offsetTop - 20}px`;
+    f.style.width = `${test.offsetWidth +40}px`;
+    f.style.height = `${test.offsetHeight + 40}px`;
   }, [])
  
   return (
@@ -52,7 +54,7 @@ function MyContainer() {
         <div id="form1" className={classes.margin}>
           <MyForm id="form1" myClick={myClick}/>
         </div>
-        <div id="form2">
+        <div id="form2" className={classes.margin}>
           <MyForm id="form2" myClick={myClick}/>
         </div>
       </div>
@@ -60,7 +62,7 @@ function MyContainer() {
         <div id="form3" className={classes.margin}>
           <MyForm id="form3" myClick={myClick}/>
         </div>
-        <div id="form4">
+        <div id="form4" className={classes.margin}>
           <MyForm id="form4" myClick={myClick}/>
         </div>
       </div>
