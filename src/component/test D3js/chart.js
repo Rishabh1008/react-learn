@@ -57,11 +57,11 @@ function Chart(props) {
      */
     console.log("test1", JSON.stringify(dataUrl));
     // d3.json(JSON.stringify(dataUrl)).then(json => {
-    console.log("test123");
+    console.log("test123" , d3);
     labelClassScale.domain(dataUrl.labels);
 
     const nest = d3
-      // .nest()
+    // .nest()
       // .key((d) => d.circle0)
 
       //.key(d => d.circle3)

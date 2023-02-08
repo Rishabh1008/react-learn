@@ -11,6 +11,7 @@ export default function YearField(props) {
 
       <Input
         name="year"
+        id="year"
         value={year}
         onChange={(e) => updateSimple(e)}
         defaultValue={0}
@@ -24,6 +25,7 @@ export default function YearField(props) {
       <Slider
         defaultValue={0}
         className="slider mb2"
+        id="year-slider"
         onChange={(event, newYear) => handleSliderChange("year", newYear)}
         step={12}
         min={0}
@@ -43,6 +45,7 @@ export function RateField(props) {
       <Typography>Rate</Typography>
       <Input
         name="rate"
+        id="rate"
         value={rate}
         onChange={(e) => updateSimple(e)}
         margin="dense"
@@ -57,6 +60,7 @@ export function RateField(props) {
         defaultValue={0}
         className="slider mb2"
         aria-label="rate"
+        id="rate-slider"
         onChange={(event, newYear) => handleSliderChange("rate", newYear)}
         step={0.1}
         min={0}

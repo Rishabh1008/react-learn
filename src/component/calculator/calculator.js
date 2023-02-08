@@ -34,7 +34,7 @@ function MyCalculator() {
     useEffect(() => {
       setSimpleInt(parseFloat(amount*year*rate/100).toFixed(2));
       setCompoundInt(parseFloat((amount*(Math.pow(1 + rate/100, year)))-amount).toFixed(2))
-    })
+    },[])
     
     const updateSimple = (e) => {
       const localState = { ...temData };
@@ -56,12 +56,13 @@ function MyCalculator() {
       <div className="container-inner">
         <div className="output mb2">
           <Typography className="">Simple Interest</Typography>
-          <Typography className="mb2">₹{simpleInt}</Typography>
+          <Typography id="simple-interest" className="mb2">₹{simpleInt}</Typography>
           <Typography className="">Compound Interest</Typography>
-          <Typography className="">₹{CompoundInt}</Typography>
+          <Typography id="compound-interest" className="">₹{CompoundInt}</Typography>
         </div>
         <div className="inputs">
           <input
+          id="principle-amount"
             className="amount-control mb2"
             onChange={(e) => updateSimple(e)}   
             name= "amount"
