@@ -3,7 +3,7 @@ const steps = [
         title: 'simple-interest',
         content: 'This is calculated simple interest',
         target:'#simple-interest',
-        placement:'right',
+        placement:'top-start',
         styles: {
           options:{
             width: 500,
